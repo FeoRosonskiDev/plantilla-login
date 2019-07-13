@@ -12,7 +12,18 @@
     --secondary-color: hsl(195, 50%, 50%);
 }
 
+/* login start */
+
 .login-container{
+    display: none;
+}
+
+.login-container:target{
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    background-color: rgba(0, 0, 0, .35);
     display: flex;
     flex-flow: column wrap;
     justify-content: center;
@@ -21,10 +32,27 @@
 }
 
 .login-form{
+    position: relative;
     display: flex;
     flex-flow: column wrap;
     box-shadow: 0 0 10px 5px #000;
     padding: 1em;
+    background-color: #fff;
+}
+
+.close::after{
+    content: "x";
+    color: #fff;
+    background-color: #000;
+    position: absolute;
+    top: -1em;
+    right: -1em;
+    width: 2em;
+    height: 2em;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 .input{
@@ -51,11 +79,24 @@
     background-color: var(--secondary-color);
 }
 
-.login-link{
+.link{
     font-size: .8em;
     text-decoration: none;
 }
 
 .mt1{
     margin-top: 1em;
+}
+
+/* login end */
+
+.menu{
+    display: flex;
+    justify-content: center;
+    list-style: none;
+    text-align: center;
+}
+
+.menu-item{
+    flex: 1;
 }
