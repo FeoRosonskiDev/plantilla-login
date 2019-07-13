@@ -8,12 +8,13 @@
 
 :root{
     --font-family: 'Literata', serif;
-    --main-color: hsl(240, 100%, 50%);
-    --secondary-color: hsl(240, 50%, 50%);
+    --main-color: hsl(195, 100%, 50%);
+    --secondary-color: hsl(195, 50%, 50%);
 }
 
 .login-container{
     display: flex;
+    flex-flow: column wrap;
     justify-content: center;
     align-items: center;
     height: 100vh;
@@ -22,7 +23,6 @@
 .login-form{
     display: flex;
     flex-flow: column wrap;
-    width: 50vw;
     box-shadow: 0 0 10px 5px #000;
     padding: 1em;
 }
@@ -49,4 +49,13 @@
 .login-submit:hover, 
 .login-submit:active{
     background-color: var(--secondary-color);
+}
+
+.login-link{
+    font-size: .8em;
+    text-decoration: none;
+}
+
+.mt1{
+    margin-top: 1em;
 }
